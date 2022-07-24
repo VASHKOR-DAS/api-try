@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1 id="activity">Take a class</h1>
+    <h1 id="activity"></h1>
     <h3>Learn from: <a id="explore-link" href="">Visit this place</a></h3>
 
     <script>
@@ -18,11 +18,16 @@
             ai site ta theke random changeable data load kora jay
         */
 
-        fetch('http://www.boredapi.com/api/activity/')
-            .then(res => res.json())
-            .then(data => {
-                document.getElementById('activity').innerText = data.activity;
-            })
+        function doSomething() {
+            fetch('http://www.boredapi.com/api/activity/')
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('activity').innerText = data.activity;
+                })
+        }
+
+        // function ta declare korle to hbena, take call korte hbe
+        doSomething();
     </script>
 </body>
 
