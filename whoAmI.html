@@ -9,22 +9,34 @@
 </head>
 
 <body>
-    <h3>Name</h3>
+    <h3>Name: <span id="user-name"></span></h3>
 
     <script>
         // random user api
         fetch('https://randomuser.me/api/')
             .then(res => res.json())
             .then(data => {
-                    // console.log(data);
-                // up a 5000 dta load hocche tai, 1ta data load korte hole
-                    // console.log(data.results[0]);
-                
+                // console.log(data);
+                // up a 5000 data load hocche tai, 1ta data load korte hole
+                // console.log(data.results[0]);
+
                 const user = data.results[0];
                 //console.log(user);
 
+                /**
                 //Object er name gulo access korte chaile
                 console.log(user.name);
+                */
+
+                // user er fullName (console a) korte chaile
+                const name = user.name;
+                const userName = `${name.title} ${name.first} ${name.last}`
+                
+                // h3 tag a add korar jnne
+                document.getElementById('user-name').innerText = userName;
+
+
+
             })
     </script>
 </body>
