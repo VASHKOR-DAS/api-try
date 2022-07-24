@@ -28,6 +28,12 @@
 
         // function ta declare korle to hbena, take call korte hbe
         doSomething();
+
+        // every 10sec por por auto (reload) doSomething function k call korbe, function k call korlei new task dibe (new task dibe)
+
+    setInterval(() => {
+        doSomething();
+    }, 10000);
     </script>
 </body>
 
