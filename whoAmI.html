@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Am I</title>
+</head>
+
+<body>
+    <h3>Name</h3>
+
+    <script>
+        // random user api
+        fetch('https://randomuser.me/api/')
+            .then(res => res.json())
+            .then(data => {
+                    // console.log(data);
+                // up a 5000 dta load hocche tai, 1ta data load korte hole
+                    // console.log(data.results[0]);
+                
+                const user = data.results[0];
+                //console.log(user);
+
+                //Object er name gulo access korte chaile
+                console.log(user.name);
+            })
+    </script>
+</body>
+
+</html>
